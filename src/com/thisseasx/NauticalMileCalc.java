@@ -6,7 +6,6 @@ public class NauticalMileCalc {
     private static final float MILES_IN_NAUTICAL_MILE = 1.150779f;
 
     public static void main(String[] args) {
-
         float nauticalMiles = 24;
 
         float miles = getMiles(nauticalMiles);
