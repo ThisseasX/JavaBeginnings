@@ -1,4 +1,4 @@
-package com.thisseasx;
+package com.thisseasx.experiments;
 
 public class FindMax {
     private static int[] ints = {5, 2, 6, 1, 8, 4};

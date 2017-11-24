@@ -1,4 +1,4 @@
-package com.thisseasx;
+package com.thisseasx.exercises;
 
 public class NauticalMileCalc {
 
