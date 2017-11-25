@@ -4,11 +4,12 @@ public class HowToClass {
 
     public static void main(String[] args) {
 
-        Person myPerson = new Person("Kwn", 12, 999);
+        Person myPerson = new Person("Kwn", 12, 9999);
 
-        myPerson.name = "Kwn";
-        myPerson.age = 12;
-        myPerson.salary = 9999;
+        // Unnecessary lines because we used the constructor instead.
+        // myPerson.name = "Kwn";
+        // myPerson.age = 12;
+        // myPerson.salary = 9999;
 
         addToDatabase(myPerson);
         myPerson.run();
