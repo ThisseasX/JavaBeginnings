@@ -8,7 +8,7 @@ public class Person {
     int salary;
 
     Person() {
-        // Empty constructor in case we need to create a new Person without filling the fields.
+        // Empty constructor in case we need to create a new Person without filling the fields immediately.
     }
 
     // Constructor
