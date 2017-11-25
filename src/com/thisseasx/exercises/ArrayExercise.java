@@ -13,7 +13,7 @@ public class ArrayExercise {
         System.out.println(ch);*/
 
         int[] ints = {1, 2, 3, 4, 5, 6, 7};
-        for (int i = 0; i < ints.length / 2; i++) {
+        for (int i = 0; i < ints.length; i++) {
             System.out.println(ints[i]);
         }
     }

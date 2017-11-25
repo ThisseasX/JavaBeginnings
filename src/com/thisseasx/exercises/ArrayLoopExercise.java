@@ -10,6 +10,7 @@ public class ArrayLoopExercise {
         System.out.print("My int array: ");
         for (int i : numbers) {
             System.out.print(i + " ");
+
             if (i < min) min = i;
             if (i > max) max = i;
         }

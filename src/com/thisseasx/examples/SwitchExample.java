@@ -1,6 +1,6 @@
-package com.thisseasx.experiments;
+package com.thisseasx.examples;
 
-public class Test {
+public class SwitchExample {
 
     public static void main(String[] args) {
         char grade = 'C';
