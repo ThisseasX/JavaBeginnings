@@ -38,6 +38,9 @@ public class Author {
 
     @Override
     public String toString() {
-        return String.format("Author[name=%s,email=%s,gender=%s]", name, email, gender);
+        return String.format("Author:\n" +
+                "        Name: %s\n" +
+                "        Email: %s\n" +
+                "        Gender: %s", name, email, gender);
     }
 }

@@ -1,33 +1,47 @@
 package thisseasx.november2017.exercises;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Book {
 
-    private String name;
-    private Author author;
+    private String title;
+    private List<Author> authors = new ArrayList<>();
     private int price;
     private int qty;
 
-    public Book(String name, Author author, int price, int qty) {
-        this.name = name;
-        this.author = author;
+    public Book(String title, List<Author> author, int price, int qty) {
+        this.title = title;
+        this.authors = author;
         this.price = price;
         this.qty = qty;
     }
 
-    public String getName() {
-        return name;
+    public Book(String title, Author author, int price, int qty) {
+        this.title = title;
+        this.authors.add(author);
+        this.price = price;
+        this.qty = qty;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getTitle() {
+        return title;
     }
 
-    public Author getAuthor() {
-        return author;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public List<Author> getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(List<Author> authors) {
+        this.authors = authors;
+    }
+
+    public void addAuthor(Author author) {
+        this.authors.add(author);
     }
 
     public int getPrice() {
@@ -46,20 +60,31 @@ public class Book {
         this.qty = qty;
     }
 
-    public String getAuthorName() {
-        return author.getName();
+    public String getAuthorName(int index) {
+        return authors.get(index).getName();
     }
 
-    public String getAuthorEmail() {
-        return author.getEmail();
+    public String getAuthorEmail(int index) {
+        return authors.get(index).getEmail();
     }
 
-    public String getAuthorGender() {
-        return author.getGender();
+    public String getAuthorGender(int index) {
+        return authors.get(index).getGender();
     }
 
     @Override
     public String toString() {
-        return String.format("Book:[name=%s,%s,price=%s,qty=%s", name, author.toString(), price, qty);
+        StringBuilder sb = new StringBuilder();
+        sb.append("Book:\n");
+        sb.append("    Title: ").append(title).append("\n");
+
+        for (Author author : authors) {
+            sb.append("    ").append(author).append("\n");
+        }
+
+        sb.append("    Price: ").append(price).append("\n");
+        sb.append("    Quantity: ").append(qty).append("\n");
+
+        return sb.toString();
     }
 }
