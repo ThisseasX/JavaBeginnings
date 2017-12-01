@@ -4,7 +4,7 @@ class Library {
 
     // Fields.
     private Book[] books;
-    private static Librarian librarian;
+    private Librarian librarian;
 
     // Singleton Pattern.
     Librarian getLibrarian() {
