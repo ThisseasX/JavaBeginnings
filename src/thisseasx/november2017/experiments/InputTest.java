@@ -12,17 +12,16 @@ public class InputTest {
 
     private static int input() {
         int i;
-        do {
+        while (true) {
             System.out.println("Please input your dog's age:");
             while (!scanner.hasNextInt()) {
                 System.out.println("Please enter a valid number.");
                 scanner.next();
             }
             i = scanner.nextInt();
-            if (i > 1 && i <= 30)
-                break;
+            if (i > 1 && i <= 30) break;
             System.out.println("Dog's age cannot be below 1 or over 30.");
-        } while (true);
+        }
         return i;
     }
 
