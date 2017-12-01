@@ -1,4 +1,4 @@
-package thisseasx.november2017.exercises;
+package thisseasx.december2017.exercises;
 
 public class Author {
 

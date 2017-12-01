@@ -1,8 +1,9 @@
-package thisseasx.november2017.exercises;
+package thisseasx.december2017.exercises;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class Book {
 
     private String title;
