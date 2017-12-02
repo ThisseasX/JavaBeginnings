@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class BookExercise2 {
+public class BookExercise {
 
     public static void main(String[] args) {
 
@@ -25,7 +25,7 @@ public class BookExercise2 {
         Library lib = new Library(books);
         Librarian librarian = lib.getLibrarian();
 
-        System.out.println(librarian.searchBook(harryPotter));
-        System.out.println(librarian.searchAuthor(tolkien));
+        System.out.println(librarian.findBook(harryPotter));
+        System.out.println(librarian.findAuthor(tolkien));
     }
 }

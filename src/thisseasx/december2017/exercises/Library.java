@@ -6,20 +6,18 @@ class Library {
     private Book[] books;
     private Librarian librarian;
 
-    // Singleton Pattern.
-    Librarian getLibrarian() {
-        if (librarian == null) librarian = new Librarian();
-        return librarian;
-    }
-
     // Private empty constructor to disable creation of empty Library objects from outside.
     @SuppressWarnings("unused")
     private Library() {
     }
 
-    // Default constructor.
     Library(Book[] books) {
         this.books = books;
+        this.librarian = new Librarian();
+    }
+
+    Librarian getLibrarian() {
+        return librarian;
     }
 
     // Inner Librarian Class that has access to the Library's books.
@@ -30,12 +28,13 @@ class Library {
         }
 
         // Search method for Book, takes a Book argument.
-        Book searchBook(Book book) {
-            return searchBook(book.getTitle());
+        Book findBook(Book book) {
+            return findBook(book.getTitle());
         }
 
         // Search method for Book, takes a String argument.
-        Book searchBook(String title) {
+        Book findBook(String title) {
+            System.out.printf("Searching for book '%s'...\n\n", title);
             for (Book book : books) {
                 if (book.getTitle().equals(title)) return book;
             }
@@ -43,12 +42,13 @@ class Library {
         }
 
         // Search method for Author, takes a Author argument.
-        Author searchAuthor(Author author) {
-            return searchAuthor(author.getName());
+        Author findAuthor(Author author) {
+            return findAuthor(author.getName());
         }
 
         // Search method for Author, takes a String argument.
-        Author searchAuthor(String authorName) {
+        Author findAuthor(String authorName) {
+            System.out.printf("Searching for author '%s'...\n\n", authorName);
             for (Book book : books) {
                 for (Author author : book.getAuthors()) {
                     if (author.getName().equals(authorName)) return author;
