@@ -1,5 +1,6 @@
 package thisseasx.december2017.exercises.LibraryExercise;
 
+@SuppressWarnings("unused")
 public class Author {
 
     private String name;

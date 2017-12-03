@@ -6,16 +6,13 @@ class Library {
     private Book[] books;
     private Librarian librarian;
 
-    // Private empty constructor to disable creation of empty Library objects from outside.
-    @SuppressWarnings("unused")
-    private Library() {
-    }
-
+    // Constructor.
     Library(Book[] books) {
         this.books = books;
         this.librarian = new Librarian();
     }
 
+    // Getter for Librarian.
     Librarian getLibrarian() {
         return librarian;
     }
