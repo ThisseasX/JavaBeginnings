@@ -1,30 +1,29 @@
 package thisseasx.december2017.exercises.LibraryExercise;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @SuppressWarnings("unused")
 public class Book {
 
     private String title;
-    private List<Author> authors = new ArrayList<>();
+    private List<Author> authors;
     private int price;
     private int qty;
 
-    // Constructor with List of Authors.
-    Book(String title, List<Author> author, int price, int qty) {
+    // Constructor with a List of Authors.
+    Book(String title, List<Author> authors, int price, int qty) {
         this.title = title;
-        this.authors = author;
+        this.authors = authors;
         this.price = price;
         this.qty = qty;
     }
 
-    // Constructor with single Author.
+    // Constructor chaining with a single Author.
     Book(String title, Author author, int price, int qty) {
-        this.title = title;
-        this.authors.add(author);
-        this.price = price;
-        this.qty = qty;
+        this(title, new ArrayList<>(Collections.singletonList(author)), price, qty);
     }
 
     String getTitle() {
