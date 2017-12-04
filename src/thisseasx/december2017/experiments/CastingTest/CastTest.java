@@ -5,11 +5,11 @@ public class CastTest {
     public static void main(String[] args) {
 
         Animal a;
+
         a = new Cat();
 
         Dog c = new Dog();
 
-        c = (Dog) a;
-
+        c = (Dog) a; // java.lang.ClassCastException thrown.
     }
 }
