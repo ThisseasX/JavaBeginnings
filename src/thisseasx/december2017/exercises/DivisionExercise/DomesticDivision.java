@@ -12,7 +12,7 @@ class DomesticDivision extends Division {
     @Override
     void display() {
         super.display();
-        System.out.printf(" and it is located in %s.\n\n",
+        System.out.printf(", and it is located in %s.\n\n",
                 state);
     }
 }

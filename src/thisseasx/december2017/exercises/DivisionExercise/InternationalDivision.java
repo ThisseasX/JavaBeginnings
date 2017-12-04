@@ -14,7 +14,7 @@ class InternationalDivision extends Division {
     @Override
     void display() {
         super.display();
-        System.out.printf(" and it is located in %s, which is a %s-speaking country.\n\n",
+        System.out.printf(", and it is located in %s, which is a %s-speaking country.\n\n",
                 country, language);
     }
 }
