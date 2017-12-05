@@ -1,6 +1,6 @@
 package thisseasx.december2017.exercises.PhoneExercise;
 
-public class UsePhone {
+public class PhoneExercise {
 
     public static void main(String[] args) {
 
