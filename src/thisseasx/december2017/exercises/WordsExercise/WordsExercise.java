@@ -39,6 +39,16 @@ public class WordsExercise {
         sortedMap.putAll(unSortedMap);
 
         printMapEntries(sortedMap, 50);
+        input(unSortedMap);
+    }
+
+    private static void input(Map map) {
+        System.out.println("\nType a word to search in the text:");
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine().toLowerCase();
+        if (map.containsKey(s)) {
+            System.out.printf("The word '%s' appears %s times%n", s, map.get(s));
+        }
     }
 
     @SuppressWarnings("SameParameterValue")
