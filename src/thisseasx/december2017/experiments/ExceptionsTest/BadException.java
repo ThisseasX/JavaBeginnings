@@ -3,7 +3,7 @@ package thisseasx.december2017.experiments.ExceptionsTest;
 class BadException extends Exception {
 
     BadException() {
-        super();
+        super("BadException");
     }
 
     BadException(String message) {

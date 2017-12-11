@@ -3,7 +3,7 @@ package thisseasx.december2017.experiments.ExceptionsTest;
 class FailException extends Exception {
 
     FailException() {
-        super();
+        super("FailException");
     }
 
     FailException(String message) {
