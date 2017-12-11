@@ -27,7 +27,6 @@ class Employee implements Comparable<Employee> {
 
     @Override
     public String toString() {
-        return String.format("Employee #%s named '%s'",
-                this.id, this.name);
+        return String.format("Employee #%s named '%s'", this.id, this.name);
     }
 }
