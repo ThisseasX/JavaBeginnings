@@ -1,4 +1,4 @@
-package thisseasx.december2017.exercises.NullPointerExceptionExercise;
+package thisseasx.december2017.exercises.ExceptionsExercise;
 
 public class NullPointerExceptionExercise {
 
