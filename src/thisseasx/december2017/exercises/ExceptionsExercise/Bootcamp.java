@@ -6,7 +6,8 @@ import thisseasx.december2017.exercises.ExceptionsExercise.Exceptions.DigitExcep
 class Bootcamp {
 
     static void welcome(double d) throws DigitException, AnotherDigitException {
-        if (d > 25) throw new DigitException(String.valueOf(d));
-        else throw new AnotherDigitException();
+        String stringValue = String.valueOf(d);
+        if (d > 25) throw new DigitException(stringValue);
+        else throw new AnotherDigitException(stringValue);
     }
 }

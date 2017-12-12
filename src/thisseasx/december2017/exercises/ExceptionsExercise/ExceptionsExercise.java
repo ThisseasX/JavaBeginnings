@@ -7,7 +7,7 @@ public class ExceptionsExercise {
 
     public static void main(String[] args) {
         try {
-            Bootcamp.welcome(26);
+            Bootcamp.welcome(23);
         } catch (DigitException | AnotherDigitException e) {
             e.printStackTrace();
         }
