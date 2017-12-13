@@ -11,5 +11,7 @@ public class ExceptionsExercise {
         } catch (DigitException | AnotherDigitException e) {
             e.printStackTrace();
         }
+
+        System.out.println(Bootcamp.bye());
     }
 }

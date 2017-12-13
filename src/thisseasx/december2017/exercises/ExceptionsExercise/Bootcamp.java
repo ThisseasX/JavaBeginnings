@@ -10,4 +10,15 @@ class Bootcamp {
         if (d > 25) throw new DigitException(stringValue);
         else throw new AnotherDigitException(stringValue);
     }
+
+    static int bye() {
+        try {
+            welcome(299.7);
+        } catch (DigitException e) {
+            return 605;
+        } catch (AnotherDigitException e) {
+            return 230;
+        }
+        return -1;
+    }
 }
