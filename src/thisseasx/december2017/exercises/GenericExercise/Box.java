@@ -1,27 +1,41 @@
 package thisseasx.december2017.exercises.GenericExercise;
 
-class Box<K> {
+class Box<T> {
 
-    private K k1;
-    private K k2;
-    private K k3;
+    private T t1;
+    private T t2;
+    private T t3;
 
-    Box(K k1, K k2, K k3) {
-        this.k1 = k1;
-        this.k2 = k2;
-        this.k3 = k3;
+    Box(T t1, T t2, T t3) {
+        this.t1 = t1;
+        this.t2 = t2;
+        this.t3 = t3;
     }
 
-    K get(int index) {
-        if (index <= 0) return k1;
-        else if (index >= 2) return k3;
-        else return k2;
+    T get(int index) {
+        switch (index) {
+            case 0:
+                return t1;
+            case 1:
+                return t2;
+            case 2:
+                return t3;
+            default:
+                return null;
+        }
     }
 
-    K set(int index, K value) {
-        if (index <= 0) return k1 = value;
-        else if (index >= 2) return k3 = value;
-        else return k2 = value;
+    void set(int index, T value) {
+        switch (index) {
+            case 0:
+                this.t1 = value;
+                break;
+            case 1:
+                this.t2 = value;
+                break;
+            case 2:
+                this.t3 = value;
+        }
     }
 
     int size() {

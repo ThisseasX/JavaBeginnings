@@ -3,18 +3,18 @@ package thisseasx.december2017.exercises.WordsExercise;
 import com.sun.xml.internal.ws.util.StringUtils;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.*;
 import java.util.Map.Entry;
 
 public class WordsExercise {
 
     public static void main(String[] args) throws IOException {
-        InputStream stream = WordsExercise.class.getResourceAsStream("book.txt");
-        InputStreamReader isr = new InputStreamReader(stream);
-        BufferedReader br = new BufferedReader(isr);
+
+        BufferedReader br = new BufferedReader(
+                new FileReader(WordsExercise.class.getResource("book.txt").getPath())
+        );
 
         List<String> list = new ArrayList<>();
 

@@ -41,6 +41,9 @@ public class BunnyExercise {
         for (Bunny bunny : bunnies) {
             bunny.hop();
         }
+
+        System.out.println("\nHopping with method reference\n");
+        bunnies.forEach(Bunny::hop);
     }
 
     private static int input() {
