@@ -21,17 +21,7 @@ class CarFactory {
                 lc.setAerofoil("luxury aerofoil");
                 return lc;
             default:
-                return new Car() {
-                    @Override
-                    public void startEngine() {
-
-                    }
-
-                    @Override
-                    public void drive() {
-
-                    }
-                };
+                return new Car();
         }
     }
 }

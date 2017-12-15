@@ -1,17 +1,11 @@
 package thisseasx.december2017.experiments.FactoryTest;
 
-class LuxuryCar implements Car {
+class LuxuryCar extends SmallCar {
 
-    private String engine;
-    private String wheels;
     private String aerofoil;
 
-    void setEngine(String engine) {
-        this.engine = engine;
-    }
-
-    void setWheels(String wheels) {
-        this.wheels = wheels;
+    String getAerofoil() {
+        return aerofoil;
     }
 
     void setAerofoil(String aerofoil) {
@@ -21,12 +15,12 @@ class LuxuryCar implements Car {
     @Override
     public void startEngine() {
         System.out.printf("%s's %s is starting!%n",
-                this.getClass().getSimpleName(), engine);
+                this.getClass().getSimpleName(), getEngine());
     }
 
     @Override
     public void drive() {
         System.out.printf("%s is driving on %s with %s!%n",
-                this.getClass().getSimpleName(), wheels, aerofoil);
+                this.getClass().getSimpleName(), getWheels(), getAerofoil());
     }
 }
