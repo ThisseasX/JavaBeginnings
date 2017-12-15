@@ -3,13 +3,12 @@ package thisseasx.december2017.exercises.LibraryExercise;
 class Library {
 
     // Fields.
-    private Book[] books;
-    private Librarian librarian;
+    private final Book[] books;
+    private final Librarian librarian = new Librarian();
 
     // Constructor.
     Library(Book[] books) {
         this.books = books;
-        this.librarian = new Librarian();
     }
 
     // Getter for Librarian.
