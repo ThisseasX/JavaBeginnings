@@ -15,13 +15,13 @@ class SmallCar implements Car {
 
     @Override
     public void startEngine() {
-        System.out.printf("%s's %s engine is starting!%n",
+        System.out.printf("%s's %s is starting!%n",
                 this.getClass().getSimpleName(), engine);
     }
 
     @Override
     public void drive() {
-        System.out.printf("%s is driving on %s wheels!%n",
+        System.out.printf("%s is driving on %s!%n",
                 this.getClass().getSimpleName(), wheels);
     }
 }
