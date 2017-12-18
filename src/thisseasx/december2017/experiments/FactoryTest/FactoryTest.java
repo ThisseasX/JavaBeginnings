@@ -1,19 +1,19 @@
 package thisseasx.december2017.experiments.FactoryTest;
 
-import thisseasx.december2017.experiments.FactoryTest.SandwichFactory.Sandwich;
-
-import static thisseasx.december2017.experiments.FactoryTest.SandwichFactory.SandwichType.*;
+import static thisseasx.december2017.experiments.FactoryTest.CarFactory.CarType;
 
 public class FactoryTest {
 
     public static void main(String[] args) {
-        Sandwich s1 = SandwichFactory.createSandwich(SANDWICH_1);
-        System.out.println(s1);
+        Car c1 = CarFactory.newCar(CarType.SMALL);
+        Car c2 = CarFactory.newCar(CarType.LUXURY);
 
-        Sandwich s2 = SandwichFactory.createSandwich(SANDWICH_2);
-        System.out.println(s2);
+        c1.startEngine();
+        c1.drive();
 
-        Sandwich s3 = SandwichFactory.createSandwich(SANDWICH_3);
-        System.out.println(s3);
+        System.out.println();
+
+        c2.startEngine();
+        c2.drive();
     }
 }
