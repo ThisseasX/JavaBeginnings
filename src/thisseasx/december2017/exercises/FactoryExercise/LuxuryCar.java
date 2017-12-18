@@ -1,10 +1,10 @@
-package thisseasx.december2017.experiments.FactoryTest;
+package thisseasx.december2017.exercises.FactoryExercise;
 
 class LuxuryCar extends SmallCar {
 
     private String aerofoil;
 
-    String getAerofoil() {
+    private String getAerofoil() {
         return aerofoil;
     }
 

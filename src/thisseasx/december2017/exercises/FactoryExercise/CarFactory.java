@@ -1,4 +1,4 @@
-package thisseasx.december2017.experiments.FactoryTest;
+package thisseasx.december2017.exercises.FactoryExercise;
 
 class CarFactory {
 
