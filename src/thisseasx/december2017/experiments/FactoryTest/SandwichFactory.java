@@ -8,41 +8,54 @@ import java.util.List;
 class SandwichFactory {
 
     static Sandwich createSandwich(SandwichType type) {
-        Sandwich s = new Sandwich();
-        s.setType(type);
+        SandwichBuilder sb = new SandwichBuilder();
+        sb.setType(type);
         switch (type) {
             case SANDWICH_1:
-                s.addIngredient("Lettuce")
+                sb.addIngredient("Lettuce")
                         .addIngredient("Ham")
                         .addIngredient("Cheese");
                 break;
             case SANDWICH_2:
-                s.addIngredient("Mushroom")
+                sb.addIngredient("Mushroom")
                         .addIngredient("Ham")
                         .addIngredient("Tomato");
                 break;
             case SANDWICH_3:
-                s.addIngredient("Cheese")
+                sb.addIngredient("Cheese")
                         .addIngredient("Omelet")
                         .addIngredient("Egg");
         }
-        return s;
+        return sb.create();
     }
 
-    static class Sandwich {
+    static class SandwichBuilder {
 
-        private List<String> ingredients = new ArrayList<>();
+        private final List<String> ingredients = new ArrayList<>();
         private SandwichType type;
 
-        private Sandwich() {
-        }
-
-        Sandwich addIngredient(String ingredient) {
+        private SandwichBuilder addIngredient(String ingredient) {
             this.ingredients.add(ingredient);
             return this;
         }
 
-        void setType(SandwichType type) {
+        private SandwichBuilder setType(SandwichType type) {
+            this.type = type;
+            return this;
+        }
+
+        private Sandwich create() {
+            return new Sandwich(ingredients, type);
+        }
+    }
+
+    static class Sandwich {
+
+        private final List<String> ingredients;
+        private final SandwichType type;
+
+        private Sandwich(List<String> ingredients, SandwichType type) {
+            this.ingredients = ingredients;
             this.type = type;
         }
 
