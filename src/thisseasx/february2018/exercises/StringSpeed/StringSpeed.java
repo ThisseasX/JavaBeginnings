@@ -36,9 +36,9 @@ public class StringSpeed {
     private static void stringBuild() {
         long startTime = System.nanoTime();
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < TIMES; i++) {
-            sb.append("Hello World");
-        }
+
+        for (int i = 0; i < TIMES; i++) sb.append("Hello World");
+
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
         System.out.printf("Elapsed Time with Build: %s%n", elapsedTime);
