@@ -1,6 +1,6 @@
-package thisseasx.december2017.exercises.InheritanceExercise;
+package thisseasx.revision.InheritanceRevision;
 
-public class InheritanceA {
+class InheritanceA {
 
     void test() {
         System.out.println("A Test");

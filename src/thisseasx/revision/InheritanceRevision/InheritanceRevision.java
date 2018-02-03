@@ -1,6 +1,6 @@
-package thisseasx.december2017.exercises.InheritanceExercise;
+package thisseasx.revision.InheritanceRevision;
 
-public class InheritanceExercise {
+public class InheritanceRevision {
 
     public static void main(String[] args) {
         InheritanceB b = new InheritanceB();
