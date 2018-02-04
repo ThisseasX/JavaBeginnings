@@ -1,5 +1,6 @@
 package thisseasx.february2018.exercises.StringSpeed;
 
+@SuppressWarnings({"unused", "StringConcatenationInLoop", "MismatchedQueryAndUpdateOfStringBuilder"})
 public class StringSpeed {
 
     private static final int TIMES = 20;
